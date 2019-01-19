@@ -9,12 +9,12 @@ import StepSequencer from './stepSequencer';
 import FX from './FX';
 
 const Container = styled.div`
-  max-width: 800px;
+  max-width: 80%;
   margin: auto;
-  background: linear-gradient(to bottom right, #222, #0a0a0a);
-  border: 2px solid black;
+  background: linear-gradient(to bottom right, #222, #c4c4c4);
+  border: 4px solid black;
   border-radius: 4px;
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
 `;
@@ -23,7 +23,7 @@ const ButtonContainer = styled.div`
   flex: 1;
   flex-direction: row;
   align-items: stretch;
-  width: 100%;
+  width: 50%;
   padding: 0px 20px 10px;
   display: flex;
 `;
@@ -150,4 +150,4 @@ export default function DrumMachine() {
   );
 }
 
-
+// export default DrumMachine;

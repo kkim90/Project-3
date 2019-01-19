@@ -7,7 +7,6 @@ const flash = keyframes`
   0% {
     opacity: 0.5;
   }
-
   50% {
     opacity: 1;
   }
@@ -20,7 +19,7 @@ const flashMixin = css`
   animation: ${flash} 0.5s linear infinite;
 `;
 
-const stepButton = styled.button`
+const StepButton = styled.button`
   flex: 1;
   background: ${props => (props.offsetColor ? '#25CCF7' : '#FD7272')};
   opacity: ${props => (props.on ? 1 : 0.35)};
@@ -29,8 +28,8 @@ const stepButton = styled.button`
   ${props => props.doubled && flashMixin}
 `;
 
-const isOffsetColor = index =>
-  (index > 3 && index < 8) || (index > 11 && index < 16);
+// const isOffsetColor = index =>
+//   (index > 3 && index < 8) || (index > 11 && index < 16);
 
 export default React.memo(function Step({ on, index, name, doubled }) {
   const context = useContext(stepContext);
@@ -54,11 +53,11 @@ export default React.memo(function Step({ on, index, name, doubled }) {
     });
   }
   return (
-    <stepButton
+    <StepButton
       on={on}
-      offsetColor={isOffsetColor(index)}
+      // offsetColor={isOffsetColor(index)}
       doubled={doubled}
       onClick={toggleStep}
-    />
+      /> 
   );
 });

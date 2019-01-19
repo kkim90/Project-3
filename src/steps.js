@@ -2,7 +2,7 @@ import React, { useMemo, useContext } from 'react';
 import styled from 'styled-components';
 
 import stepContext from './stepContext';
-import step from './step';
+import Step from './step';
 
 const Wrapper = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ export default function steps(props) {
   return (
     <Wrapper>
       {steps.map((s, i) => (
-        <step
+        <Step
           on={s !== 0}
           doubled={s === 2}
           index={i}
